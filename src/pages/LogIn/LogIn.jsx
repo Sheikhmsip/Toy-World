@@ -28,6 +28,7 @@ const LogIn = () => {
             const user = result.user;
             console.log(user);
             toast.success('Login Successful')
+            event.target.reset();
             return setError('')
         })
         .catch(error => {

@@ -8,7 +8,7 @@ const Products = () => {
     const [marvel, setMarvel] = useState([])
 
     const [toy , setToy] = useState([])
-    console.log(setToy)
+    
 
 
  const handleMarvel= () =>{

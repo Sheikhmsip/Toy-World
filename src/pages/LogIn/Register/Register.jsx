@@ -34,6 +34,7 @@ const Register = () => {
             // console.log(error)
            setError(toast.error('Already Register this email')) 
            
+           
         })
     }
 
@@ -72,8 +73,6 @@ const Register = () => {
                             <input type="password" name='password' placeholder="password" required className="input input-bordered" />
                            
                         </div>
-
-                        <p className=' text-red-500'>{error}</p>
                         <div className="form-control mt-6">
                             <input className="btn btn-primary" type="submit" value="Registration" />
                         </div>
