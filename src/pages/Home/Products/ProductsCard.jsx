@@ -16,7 +16,7 @@ const ProductsCard = ({product}) => {
                 <p>{description}</p>
                 <p>${price}</p>
                 <p>
-                <Rating style={{ maxWidth: 250 }} value={rating}  />
+                <Rating style={{ maxWidth: 150 }} value={rating}  />
                 </p>
                 <div className="card-actions">
                     <button className="btn btn-primary">View Details</button>
