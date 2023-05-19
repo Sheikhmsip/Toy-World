@@ -26,7 +26,7 @@ const NavBar = () => {
                         {nevItems}
                     </ul>
                 </div>
-                <Link to="/" className=" btn-ghost normal-case text-xl"><img src='' alt="" /></Link>
+                <Link to="/" className=" btn-ghost normal-case text-xl"><img className='w-[100px] h-[80px]' src='https://i.ibb.co/7nw8vv8/attachment-62p129397.png' alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

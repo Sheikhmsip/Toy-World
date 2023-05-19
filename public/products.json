@@ -1,91 +1,97 @@
 [
     {
-        "product_id": "04",
-        "title": "Engine Oil Change",
-        "img": "https://i.ibb.co/T2cpBd5/888.jpg",
-        "price": "20.00",
-        "description": "loram lkdfdkjfuierfjdsfdskkklffflksflks",
-        "rating": "4.5",
-        "quantity": "20",
-        "email": "toy@gmail.com",
-        "seller_name": "kuddus boyati",
-        "address": "Gazipur, Dhaka",
-        "phone": "+8801785-884679"
-
-
-       
-    },
-    {
-        "product_id": "05",
-        "title": "Battery Charge",
-        "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
-        "price": "20.00",
-        "description": "loram lkdfdkjfuierfjdsfdskkklffflksflks",
-        "rating": "4.5",
-        "quantity": "20",
-        "email": "toy@gmail.com",
-        "seller_name": "kuddus boyati",
-        "address": "Gazipur, Dhaka",
-        "phone": "+8801785-884679"
-
-       
-    },
-    {
         "product_id": "01",
-        "title": "Full car Repair",
-        "img": "https://i.ibb.co/R6Z2nFM/55.jpg",
-        "price": "200.00",
-        "description": "loram lkdfdkjfuierfjdsfdskkklffflksflks",
-        "rating": "4.5",
+        "title": "The Mandalorian",
+        "img": "https://i.ibb.co/jfRTcR2/71-Vut8-HAcd-L-AC-SX679.jpg",
+        "price": "50.00",
+        "description": "Star Wars - The Black Series - 6 Inch Bo-Katan Kryze - The Mandalorian - Scale Collectible Action and Toy Figures - Toys for Kids - F1863 - Ages 4+",
+        "rating": 5,
         "quantity": "20",
-        "email": "toy@gmail.com",
-        "seller_name": "kuddus boyati",
+        "email": "starware@gmail.com",
+        "seller_name": "Debit Willy",
         "address": "Gazipur, Dhaka",
-        "phone": "+8801785-884679"
+        "phone": "+8801785-884679",
+        "category": "star wars"
+
 
        
     },
     {
         "product_id": "02",
-        "title": "Engine Repair",
-        "img": "https://i.ibb.co/5MvmD2g/88.jpg",
-        "price": "150.00",
-        "description": "loram lkdfdkjfuierfjdsfdskkklffflksflks",
-        "rating": "4.5",
+        "title": "The Black Series Darth Maul Toy",
+        "img": "https://i.ibb.co/hFv8VRP/614-PGZu-UJ2-L-AC-SX679.jpg",
+        "price": "20.00",
+        "description": "Star Wars The Black Series Darth Maul Toy 6-Inch-Scale The Clone Wars Collectible Action Figure, Toys for Kids Ages 4 and Up",
+        "rating": 2,
         "quantity": "20",
-        "email": "toy@gmail.com",
-        "seller_name": "kuddus boyati",
+        "email": "starware@gmail.com",
+        "seller_name": "Debit Willy",
         "address": "Gazipur, Dhaka",
-        "phone": "+8801785-884679"
+        "phone": "+8801785-884679",
+        "category": "star wars"
 
        
     },
     {
         "product_id": "03",
-        "title": "Automatic Services",
-        "img": "https://i.ibb.co/wh7t3N3/555.jpg",
-        "price": "30.00",
-        "description": "loram lkdfdkjfuierfjdsfdskkklffflksflks",
-        "rating": "4.5",
-        "quantity": "20",
-        "email": "toy@gmail.com",
-        "seller_name": "kuddus boyati",
+        "title": "Star Wars Black Series",
+        "img": "https://i.ibb.co/L5Gjkm2/61pze-Tf-HZSL.jpg",
+        "price": "200.00",
+        "description": "Action Figure  Jedi Knight  Star Wars: Attack of the Clones -Kids toys & collectible figures ",
+        "rating": 4,
+        "quantity": "18",
+        "email": "starware@gmail.com",
+        "seller_name": "Debit Willy",
         "address": "Gazipur, Dhaka",
-        "phone": "+8801785-884679"
+        "phone": "+8801785-884679",
+        "category": "star wars"
+
+       
+    },
+    {
+        "product_id": "04",
+        "title": "Captain America Sam Wilson",
+        "img": "https://i.ibb.co/WtYFY2M/f2be8d99-a1ff-4cde-9179-d40d6b243bfb-940edecd3ee59f44e66a11854d14e5fc.webp",
+        "price": "120.00",
+        "description": "Hasbro Marvel Legends Series Avengers Action Figure Captain America: Sam Wilson",
+        "rating": 3,
+        "quantity": "30",
+        "email": "avanger@gmail.com",
+        "seller_name": "Sam Wilson",
+        "address": "America",
+        "phone": "9900228855",
+        "category": "Avenger"
+
+       
+    },
+    {
+        "product_id": "05",
+        "title": "Iron Man F4790",
+        "img": "https://i.ibb.co/2Zz4tNL/71-Vv1-Y-z-T9-L-AC-SS130.jpg",
+        "price": "30.00",
+        "description": "Hasbro Marvel Legends Series 6-inch Scale Action Figure Toy Iron Man Mark 3 Infinity Saga character, Premium Design, Figure and 5 Accessories",
+        "rating": 5,
+        "quantity": "15",
+        "email": "toy@gmail.com",
+        "seller_name": "",
+        "address": "Gazipur, Dhaka",
+        "phone": "09580080022",
+        "category": "Marvel"
 
        
     },
     {
         "product_id": "06",
-        "title": "Electrical System",
-        "img": "https://i.ibb.co/KzCG8qr/8888.jpg",
-        "price": "20.00",
-        "description": "loram lkdfdkjfuierfjdsfdskkklffflksflks",
-        "rating": "4.5",
-        "quantity": "20",
-        "email": "toy@gmail.com",
-        "seller_name": "kuddus boyati",
+        "title": "Hulk",
+        "img": "https://i.ibb.co/9w1Q6Y8/0335224-kids-super-power-dream-toy-marvel-super-hero-legends-action-figure-toy.jpg",
+        "price": "10.00",
+        "description": "Kid's Super Power Dream Toy Marvel Super Hero Legends Action Figure Toy",
+        "rating": 4,
+        "quantity": "10",
+        "email": "sheikh@gmail.com",
+        "seller_name": "Wall Touch",
         "address": "Gazipur, Dhaka",
-        "phone": "+8801785-884679"
+        "phone": "09613-800800",
+        "category": "Marvel"
     }
 ]
