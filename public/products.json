@@ -12,9 +12,6 @@
         "address": "Gazipur, Dhaka",
         "phone": "+8801785-884679",
         "category": "star wars"
-
-
-       
     },
     {
         "product_id": "02",
@@ -29,8 +26,6 @@
         "address": "Gazipur, Dhaka",
         "phone": "+8801785-884679",
         "category": "star wars"
-
-       
     },
     {
         "product_id": "03",
@@ -41,12 +36,10 @@
         "rating": 4,
         "quantity": "18",
         "email": "starware@gmail.com",
-        "seller_name": "Debit Willy",
-        "address": "Gazipur, Dhaka",
+        "seller_name": "Marina Jeks",
+        "address": "London, UK",
         "phone": "+8801785-884679",
         "category": "star wars"
-
-       
     },
     {
         "product_id": "04",
@@ -61,28 +54,24 @@
         "address": "America",
         "phone": "9900228855",
         "category": "Avenger"
-
-       
     },
     {
         "product_id": "05",
         "title": "Iron Man F4790",
-        "img": "https://i.ibb.co/2Zz4tNL/71-Vv1-Y-z-T9-L-AC-SS130.jpg",
+        "img": "https://m.media-amazon.com/images/I/71Vv1Y+zT9L._AC_SX679_.jpg",
         "price": "30.00",
         "description": "Hasbro Marvel Legends Series 6-inch Scale Action Figure Toy Iron Man Mark 3 Infinity Saga character, Premium Design, Figure and 5 Accessories",
         "rating": 5,
         "quantity": "15",
         "email": "toy@gmail.com",
-        "seller_name": "",
+        "seller_name": "Haydar Commince",
         "address": "Gazipur, Dhaka",
         "phone": "09580080022",
         "category": "Marvel"
-
-       
     },
     {
         "product_id": "06",
-        "title": "Hulk",
+        "title": "Hulk Action Figure",
         "img": "https://i.ibb.co/9w1Q6Y8/0335224-kids-super-power-dream-toy-marvel-super-hero-legends-action-figure-toy.jpg",
         "price": "10.00",
         "description": "Kid's Super Power Dream Toy Marvel Super Hero Legends Action Figure Toy",
@@ -90,8 +79,52 @@
         "quantity": "10",
         "email": "sheikh@gmail.com",
         "seller_name": "Wall Touch",
-        "address": "Gazipur, Dhaka",
+        "address": "Habiganj, Sylhet",
         "phone": "09613-800800",
         "category": "Marvel"
+    },
+    {
+        "product_id": "07",
+        "title": "Flex Rider Spider-man",
+        "img": "https://m.media-amazon.com/images/I/51d8sP-xHPL._AC_SX679_.jpg",
+        "price": "25.00",
+        "description": "Marvel Bend and Flex - Flex Rider Spider-man - 6inch Flexible Action Figure with 2-in-1 Motorbike - Toys for Kids - F0236 - Ages 6+",
+        "rating": 4,
+        "quantity": "10",
+        "email": "soiderman@gmail.com",
+        "seller_name": "Willyan Drey",
+        "address": "London,UK",
+        "phone": "09613-580600",
+        "category": "Marvel"
+    },
+
+    {
+        "product_id": "08",
+        "title": "Titan Hero Series Thor",
+        "img": "https://m.media-amazon.com/images/I/91ZhcNNGrWL._AC_SY679_.jpg",
+        "price": "25.00",
+        "description": "Marvel Avengers Titan Hero Series Thor 12-Inch Figure Action Figure with 2-in-1 Motorbike - Toys for Kids - F0236 - Ages 6+",
+        "rating": 5,
+        "quantity": "30",
+        "email": "avanger@gmail.com",
+        "seller_name": "Jek Roy",
+        "address": "London,UK",
+        "phone": "09613-800800",
+        "category": "Avenger"
+    },
+
+    {
+        "product_id": "09",
+        "title": "Endgame Red Infinity",
+        "img": "https://m.media-amazon.com/images/I/61p0tDs+tVL._AC_SX679_.jpg",
+        "price": "25.00",
+        "description": "Marvel Avengers Endgame Red Infinity Gauntlet Electronic Fist Roleplay Toy with Lights and Sounds for Kids Ages 5 and Up",
+        "rating": 4,
+        "quantity": "50",
+        "email": "avanger@gmail.com",
+        "seller_name": "Matt Steidle",
+        "address": "New-York USA",
+        "phone": "09613-4585800",
+        "category": "Avenger"
     }
 ]

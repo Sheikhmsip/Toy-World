@@ -8,9 +8,6 @@ const Products = () => {
     const [products, setProducts] = useState([])
     // const [marvel, setMarvel] = useState([])
 
-    
-    
-
 
  const handleMarvel= () =>{
     const filter = products.filter(marvel => marvel.category == 'Marvel')
@@ -31,14 +28,14 @@ const Products = () => {
  
   
     useEffect(() => {
-        fetch('products.json')
+        fetch('http://localhost:1000/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
 
 
     return (
-        <div>
+        <div className='my-4'>
             <h2 className='mx-auto  text-center bg-slate-400 text-4xl py-3 text-white font-bold'>Spacial Products Of <span className=' text-blue-600'>Toys</span> <span className=' text-yellow-400'>Stars</span></h2>
 
 

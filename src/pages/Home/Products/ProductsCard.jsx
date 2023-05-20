@@ -18,10 +18,11 @@ const ProductsCard = ({product}) => {
                 <p>
                 <Rating style={{ maxWidth: 150 }} value={rating}  />
                 </p>
-                <div className="card-actions">
-                    <button className="btn btn-primary">View Details</button>
-                </div>
+                
             </div>
+            <div className="card-actions">
+                    <button className="btn btn-block btn-primary rounded-none">View Details</button>
+                </div>
         </div>
     );
 };
