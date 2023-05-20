@@ -2,7 +2,10 @@ import React, { useContext, useState } from 'react';
 import { Link } from "react-router-dom";
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-hot-toast';
+import useTitle from '../../../hook/useTitle';
 const Register = () => {
+
+    useTitle("Register")
     const {createUser} = useContext(AuthContext);
 
     const [error, setError] = useState('');
@@ -51,7 +54,7 @@ const Register = () => {
                             <label className="label font-bold">
                                 <span className="label-text text-2xl">Name</span>
                             </label>
-                            <input type="text" name='name' placeholder="Name" className="input input-bordered" />
+                            <input type="text" name='name' placeholder="Type Your Name" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label font-bold">
@@ -63,14 +66,14 @@ const Register = () => {
                             <label className="label font-bold">
                                 <span className="label-text text-2xl">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="email" required className="input input-bordered" />
+                            <input type="email" name='email' placeholder="Type Your Email" required className="input input-bordered" />
                         </div>
 
                         <div className="form-control">
                             <label className="label font-bold">
                                 <span className="label-text text-2xl">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="password" required className="input input-bordered" />
+                            <input type="password" name='password' placeholder="Type password" required className="input input-bordered" />
                            
                         </div>
                         <div className="form-control mt-6">

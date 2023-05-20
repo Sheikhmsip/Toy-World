@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { BsGoogle } from 'react-icons/Bs';
 import { AuthContext } from '../../providers/AuthProvider';
 import { toast } from 'react-hot-toast';
+import useTitle from '../../hook/useTitle';
 
 
 const LogIn = () => {
 
     const {login, logInWithGoogle } = useContext(AuthContext);
-
+   useTitle("Login")
     const [error, setError] = useState('')
 
     const handleLogIn = event => {
@@ -16,14 +17,16 @@ const LogIn = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password)
+        const displayName = form.name.value;
+
+        console.log(email, password, displayName)
         
         if(password.length < 6) {
             toast.error("please set at least 6 characters ")
             return
           }
 
-        login(email, password) 
+        login(email, password, displayName) 
         .then(result => {
             const user = result.user;
             console.log(user);
@@ -49,17 +52,24 @@ const LogIn = () => {
                 <div className="card-body">
                     <h1 className="text-4xl font-bold">Login Form</h1>
                     <form onSubmit={handleLogIn} >
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Email</span>
+
+                    <div className="form-control">
+                            <label className=" font-bold label">
+                                <span className="label-text text-2xl">Name</span>
                             </label>
-                            <input type="email" name='email' placeholder="email" required className="input input-bordered" />
+                            <input type="text" name='name' placeholder="Type Your Name" className="input input-bordered" />
                         </div>
                         <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Password</span>
+                            <label className=" font-bold label">
+                                <span className="label-text text-2xl">Email</span>
                             </label>
-                            <input type="password" name='password' placeholder="password" required className="input input-bordered" />
+                            <input type="email" name='email' placeholder="Type Your Email" required className="input input-bordered" />
+                        </div>
+                        <div className="form-control">
+                            <label className=" font-bold label">
+                                <span className="label-text text-2xl">Password</span>
+                            </label>
+                            <input type="password" name='password' placeholder=" Type Your Password" required className="input input-bordered" />
                            
                         </div>
                         <div>

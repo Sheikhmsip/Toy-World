@@ -2,10 +2,11 @@ import  { useState, useEffect } from 'react';
 
 import MyToysCard from './MyToysCard';
 import Swal from 'sweetalert2';
+import useTitle from '../../../hook/useTitle';
 
 const MyToys = () => {
     
-
+    useTitle('MyToys')
     const [toys, setToys] = useState([]);
 
     useEffect(() =>{

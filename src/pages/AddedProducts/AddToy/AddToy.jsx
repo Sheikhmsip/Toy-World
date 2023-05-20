@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import { toast } from 'react-hot-toast';
 import { AuthContext } from '../../../providers/AuthProvider';
+import useTitle from '../../../hook/useTitle';
 
 const AddToy = () => {
-
+    useTitle("Add Toy")
     const { user } = useContext(AuthContext)
+
+    console.log(user);
 
     const handelAddToy = event => {
         event.preventDefault();
@@ -43,7 +46,7 @@ const AddToy = () => {
     }
 
     return (
-        <div className='w-[95%] mx-auto'>
+        <div className='w-[95%] mx-auto py-4'>
             <h2 className='text-center text-3xl'> Toy Add Form   </h2>
             <form onSubmit={handelAddToy}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -95,13 +98,14 @@ const AddToy = () => {
                         <input type="text" name="quantity" className="input input-bordered" />
                     </div>
 
-                    <div className=' form-control' >
+                    <div className=' form-control ' >
                         <label className=" text-xl font-bold label">
                             <span className="label-text text-blue-500">
                                 Select Toy Category
                             </span>
                         </label>
-                        <select className="text-input" name='category'>
+                        <select className="text-input select select-bordered " name='category'>
+                        <option disabled selected> Select one</option>
                             <option value="Marvel">Marvel</option>
                             <option value="Star Ware">Star Ware</option>
                             <option value="Avengers">Avengers</option>
