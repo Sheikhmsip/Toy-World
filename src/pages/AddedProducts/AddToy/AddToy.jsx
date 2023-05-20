@@ -94,7 +94,7 @@ const AddToy = () => {
                     </div>
                     <div className="form-control">
                         <label className=" text-xl font-bold label">
-                            <span className="label-text text-blue-500">Date</span>
+                            <span className="label-text text-blue-500">Uploaded Date</span>
                         </label>
                         <input type="date" name="date" className="input input-bordered" />
                     </div>
@@ -138,9 +138,7 @@ const AddToy = () => {
                     <input className="btn btn-primary btn-block" type="submit" value="Add Product" />
                 </div>
             </form>
-            <div className="card-body">
-
-            </div>
+            
         </div>
     );
 };

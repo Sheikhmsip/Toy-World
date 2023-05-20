@@ -1,9 +1,10 @@
 import  { useState, useEffect } from 'react';
 import { useLoaderData} from "react-router-dom";
 import MyToysCard from './MyToysCard';
+import Swal from 'sweetalert2';
 
 const MyToys = () => {
-    // const myToys = useLoaderData();
+    
 
     const [toys, setToys] = useState([]);
 
@@ -13,25 +14,48 @@ const MyToys = () => {
         .then(data => setToys(data))
     } , [])
 
-
-
     const deleteToy = id => {
-        fetch(`http://localhost:1000/toys/${id}`, {
+
+
+        Swal.fire({
+            title: 'Are you sure You want to Delete?',
+            text: "If you want you can cancel",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then( (result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:1000/toys/${id}`, {
             method: "DELETE"
         })
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            const remaining = toys.filter( toy => toy._id !== id);
-            setToys(remaining);
+            if (data.deletedCount > 0){
+
+                Swal.fire(
+                    "Your Toy Deleted",
+                    "This Toy has been Deleted Successful"
+                )
+                const remaining = toys.filter( toy => toy._id !== id);
+                setToys(remaining);
+            }
+            
         })
+
+            }
+        })
+        
+        
     }
 
     // console.log(myToys);
     console.log(toys)
     return (
-        <div>
-            <h2 className="text-5xl">Your Toys: </h2>
+        <div className='w-[95%] mx-auto'>
+            <h2 className="text-5xl p-4 text-blue-500 font-bold">Your Total Toys: {toys.length} </h2>
 
             <div className="overflow-x-auto w-full">
                 <table className="table w-full text-center">
