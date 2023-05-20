@@ -9,6 +9,8 @@ import MyToys from "../pages/AddedProducts/MyToys/MyToys";
 import AddToy from "../pages/AddedProducts/AddToy/AddToy";
 import UpdateToy from "../pages/AddedProducts/MyToys/UpdateToy";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import ProductsDetail from "../pages/Home/Products/ProductsDetail";
+
 
 
 const router = createBrowserRouter([
@@ -36,7 +38,7 @@ const router = createBrowserRouter([
         {
             path: 'alltoys',
             element: <AllToys></AllToys>,
-            loader: () => fetch('http://localhost:1000/toys')
+            loader: () => fetch('https://toys-server-six.vercel.app/toys')
         },
         {
             path: 'mytoys',
@@ -50,7 +52,13 @@ const router = createBrowserRouter([
         {
             path: 'updatetoy/:id',
             element: <UpdateToy></UpdateToy>,
-            loader: ({params}) => fetch(`http://localhost:1000/toys/${params.id}`)
+            loader: ({params}) => fetch(`https://toys-server-six.vercel.app/toys/${params.id}`)
+        },
+        {
+            path: 'detail/:id',
+            element: <ProductsDetail></ProductsDetail>,
+            loader: ({params}) => fetch(`https://toys-server-six.vercel.app/products/${params.id}`)
+            
         }
     ]
 }

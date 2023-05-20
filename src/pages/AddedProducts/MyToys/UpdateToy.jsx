@@ -2,7 +2,7 @@ import React from 'react';
 import { useLoaderData } from "react-router-dom";
 import useTitle from '../../../hook/useTitle';
 const UpdateToy = () => {
-    
+
     useTitle("Update Toy");
 
     const toy = useLoaderData();
@@ -21,7 +21,7 @@ const UpdateToy = () => {
 
         console.log(toy)
 
-        fetch(`http://localhost:1000/toys/${_id}`, {
+        fetch(`https://toys-server-six.vercel.app/toys/${_id}`, {
             method: 'PUT',
             headers:{
                 'content-type': 'application/json'

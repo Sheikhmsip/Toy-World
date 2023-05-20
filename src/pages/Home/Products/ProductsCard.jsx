@@ -1,11 +1,12 @@
 import React from 'react';
 import { Rating } from '@smastrom/react-rating'
+import { Link } from "react-router-dom";
 
 import '@smastrom/react-rating/style.css'
 
 const ProductsCard = ({product}) => {
 
-    const {title, description, rating, img, price, quantity, seller_name, email, phone, category } = product;
+    const {title, _id, id, description, rating, img, price, quantity, seller_name, email, phone, category } = product;
     return (
         <div className="card w-96 bg-base-100 shadow-2xl mx-auto">
             <figure className="px-10 pt-10">
@@ -16,14 +17,13 @@ const ProductsCard = ({product}) => {
                 
                 <p className='bg-red-500 p-2 rounded-lg text-white'>${price}</p>
                 <p className='text-black font-serif text-lg'>{description}</p>
-                <Rating style={{ maxWidth: 150 }} value={rating} />
-                
-                 
-                
-                
+                <Rating style={{ maxWidth: 150 }} value={rating} ></Rating>
             </div>
+
             <div className="card-actions">
-                    <button className="btn btn-block btn-primary rounded-none">View Details</button>
+                    <Link to={`/detail/${_id}`} className='w-full'>
+                    <button className="btn btn-block  btn-primary rounded-none">View Details</button>
+                    </Link>
                 </div>
         </div>
     );
