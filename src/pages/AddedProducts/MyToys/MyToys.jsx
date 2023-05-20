@@ -1,12 +1,34 @@
-import React from 'react';
-import { useLoaderData } from "react-router-dom";
+import  { useState, useEffect } from 'react';
+import { useLoaderData} from "react-router-dom";
 import MyToysCard from './MyToysCard';
 
 const MyToys = () => {
+    // const myToys = useLoaderData();
 
-    const myToys = useLoaderData();
+    const [toys, setToys] = useState([]);
 
-    console.log(myToys);
+    useEffect(() =>{
+        fetch('http://localhost:1000/toys')
+        .then(res => res.json())
+        .then(data => setToys(data))
+    } , [])
+
+
+
+    const deleteToy = id => {
+        fetch(`http://localhost:1000/toys/${id}`, {
+            method: "DELETE"
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            const remaining = toys.filter( toy => toy._id !== id);
+            setToys(remaining);
+        })
+    }
+
+    // console.log(myToys);
+    console.log(toys)
     return (
         <div>
             <h2 className="text-5xl">Your Toys: </h2>
@@ -32,10 +54,11 @@ const MyToys = () => {
                     <tbody >
                     
                        {
-                        myToys.map( toy => <MyToysCard
+                        toys.map( toy => <MyToysCard
                             
                             key={toy._id}
                             toy={toy}
+                            deleteToy={deleteToy}
 
                         >
                         </MyToysCard>)

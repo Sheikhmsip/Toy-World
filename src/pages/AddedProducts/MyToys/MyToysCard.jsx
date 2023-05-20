@@ -2,9 +2,9 @@ import React from 'react';
 import { BiEdit } from "react-icons/bi";
 import { MdDeleteForever } from "react-icons/md";
 
-const MyToysCard = ({ toy }) => {
+const MyToysCard = ({ toy, deleteToy }) => {
     console.log(toy)
-    const { photo, rating, seller, title, price, quantity, category, date, email } = toy;
+    const { photo, _id, rating, seller, title, price, quantity, category, date, email } = toy;
     return (
         <tr>
             <td>
@@ -34,7 +34,7 @@ const MyToysCard = ({ toy }) => {
                    <BiEdit className='w-20 h-12'></BiEdit>
                 </button>
 
-                <button >
+                <button onClick={() => deleteToy(_id)} >
                   <MdDeleteForever className='w-20 h-12'></MdDeleteForever>
                 </button>
             </td>
