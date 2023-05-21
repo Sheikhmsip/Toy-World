@@ -1,8 +1,12 @@
 import React from 'react';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
+
 const Gallery = () => {
     return (
-        <div className='py-5'>
+        <div data-aos="fade-down-left" data-aos-duration="3000" className='py-5'>
            <h2 className='mx-auto  text-center bg-slate-400 text-4xl py-3 text-white font-bold'>Gallery Of <span className=' text-blue-600'>Toys</span> <span className=' text-yellow-400'>Stars</span></h2>
         <div className="carousel w-full h-80">
             <div id="slide1" className="carousel-item relative w-full">

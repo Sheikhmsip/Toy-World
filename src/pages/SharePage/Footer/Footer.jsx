@@ -4,9 +4,13 @@ import { CiFacebook } from "react-icons/ci";
 import { FaInstagramSquare} from "react-icons/fa";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 const Footer = () => {
     return (
-        <footer className="bg-gray-800 text-white">
+        <footer data-aos="fade-up" data-aos-duration="2000" className="bg-gray-800 text-white">
       <div className="container mx-auto flex flex-wrap items-center justify-between p-4">
         <div className="flex items-center">
           <img src="https://i.ibb.co/SXgGjSD/attachment.png" alt="Website Logo" className=" mr-2" />

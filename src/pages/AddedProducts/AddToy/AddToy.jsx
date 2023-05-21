@@ -40,6 +40,7 @@ const AddToy = () => {
                 console.log(data);
                 if (data.insertedId) {
                     toast.success("Successfully Toy added")
+                    event.target.reset()
                 }
             })
 

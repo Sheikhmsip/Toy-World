@@ -1,11 +1,13 @@
 import React from 'react';
 
 import Marquee from "react-fast-marquee";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const Banner = () => {
     return (
-        <div>
-
+        <div data-aos="zoom-in" data-aos-duration="3000" >
             <div >
             <h2 className='mx-auto  text-center bg-slate-400 text-4xl py-3 text-white font-bold'>Collections Of <span className=' text-blue-600'>Toys</span> <span className=' text-yellow-400'>Stars</span></h2>
             </div>

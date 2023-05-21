@@ -3,12 +3,16 @@ import { Rating } from '@smastrom/react-rating'
 import { Link } from "react-router-dom";
 
 import '@smastrom/react-rating/style.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const ProductsCard = ({product}) => {
 
     const {title, _id, id, description, rating, img, price, quantity, seller_name, email, phone, category } = product;
     return (
-        <div className="card w-96 bg-base-100 shadow-2xl mx-auto">
+        <div  data-aos="zoom-in" data-aos-duration="1000"
+         className="card w-96 bg-base-100 shadow-2xl mx-auto">
             <figure className="px-10 pt-10">
                 <img  src={img} alt="toys" className="rounded-xl h-64" />
             </figure>

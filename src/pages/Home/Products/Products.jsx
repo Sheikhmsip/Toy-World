@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import ProductsCard from './ProductsCard';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const Products = () => {
     const [toy , setToy] = useState([])
@@ -29,15 +31,14 @@ const Products = () => {
  
   
     useEffect(() => {
-        fetch('http://localhost:1000/products')
+        fetch('https://toys-server-six.vercel.app/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
 
 
     return (
-        <div data-aos="fade-up"
-        data-aos-anchor-placement="center-bottom"  className='my-4'>
+        <div className='my-4'>
             <h2 className='mx-auto  text-center bg-slate-400 text-4xl py-3 text-white font-bold'>Spacial Products Of <span className=' text-blue-600'>Toys</span> <span className=' text-yellow-400'>Stars</span></h2>
 
 

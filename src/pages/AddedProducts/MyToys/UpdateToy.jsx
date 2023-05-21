@@ -1,12 +1,13 @@
 import React from 'react';
 import { useLoaderData } from "react-router-dom";
+import { toast } from 'react-hot-toast';
 import useTitle from '../../../hook/useTitle';
 const UpdateToy = () => {
 
     useTitle("Update Toy");
 
     const toy = useLoaderData();
-    const { _id, title, price, quantity,  description,date, photo, number } = toy;
+    const { _id, title, price, quantity,  description,date, photo } = toy;
 
 
     const updateProduct = event =>{
@@ -30,7 +31,16 @@ const UpdateToy = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            console.log(data);
+
+         if(data.modifiedCount > 0){
+            toast.success("Successfully Update")
+            return
+         }
+         if(data.modifiedCount === 0){
+            toast.success("Nothing Update")
+         }
+            
         })
 
 
@@ -84,12 +94,7 @@ const UpdateToy = () => {
                         <input type="text" name="description" defaultValue={description} className="input input-bordered" />
                     </div>
 
-                    <div className="form-control">
-                        <label className=" text-xl font-bold label">
-                            <span className="label-text text-blue-500">Phone</span>
-                        </label>
-                        <input type="number" name="number" defaultValue={number} placeholder="Phone Number" className="input input-bordered" />
-                    </div>
+                    
                     
                 </div>
 

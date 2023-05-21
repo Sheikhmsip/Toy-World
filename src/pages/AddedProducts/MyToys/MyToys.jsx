@@ -10,9 +10,9 @@ const MyToys = () => {
     useTitle('MyToys')
     const [toys, setToys] = useState([]);
 
-    const url = `http://localhost:1000/toys?email=${user.email}`
+    // const url = `http://localhost:1000/toys?email=${user.email}`
     useEffect(() =>{
-        fetch('http://localhost:1000/toys')
+        fetch('https://toys-server-six.vercel.app/toys')
         .then(res => res.json())
         .then(data => setToys(data))
     } , [])
@@ -30,7 +30,7 @@ const MyToys = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then( (result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:1000/toys/${id}`, {
+                fetch(`https://toys-server-six.vercel.app/toys/${id}`, {
             method: "DELETE"
         })
         .then(res => res.json())
