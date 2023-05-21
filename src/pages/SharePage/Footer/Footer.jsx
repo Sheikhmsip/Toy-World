@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { CiFacebook } from "react-icons/ci";
 import { FaInstagramSquare} from "react-icons/fa";
 import { AiOutlineDoubleRight } from "react-icons/ai";
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();

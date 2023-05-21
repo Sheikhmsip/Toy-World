@@ -1,7 +1,6 @@
 import React from 'react';
 import { Rating } from '@smastrom/react-rating'
 import { Link } from "react-router-dom";
-
 import '@smastrom/react-rating/style.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
