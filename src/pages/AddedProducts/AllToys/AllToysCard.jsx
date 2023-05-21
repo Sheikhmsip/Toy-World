@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-const AllToysCard = ({toy}) => {
+const AllToysCard = ({toy , details}) => {
     const { photo, _id, rating, seller, title, price, quantity, category, date, email } = toy;
     return (
         <tr className='hover'>
@@ -33,11 +33,14 @@ const AllToysCard = ({toy}) => {
             </td>
             
             <td className=''>
-                <Link >
-                <button >
-                   Views Details
-                </button>
-                </Link>
+                
+                <label 
+                onClick={() => details(_id)}
+                htmlFor="my-modal-6" className="btn btn-outline">
+                        Details
+
+                    </label>
+                
             </td>
         </tr>
     );
