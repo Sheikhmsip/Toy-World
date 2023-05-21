@@ -3,11 +3,12 @@ import ProductsCard from './ProductsCard';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
+
 const Products = () => {
     const [toy , setToy] = useState([])
     const [products, setProducts] = useState([])
     // const [marvel, setMarvel] = useState([])
-
+    
 
  const handleMarvel= () =>{
     const filter = products.filter(marvel => marvel.category == 'Marvel')
@@ -35,7 +36,8 @@ const Products = () => {
 
 
     return (
-        <div className='my-4'>
+        <div data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"  className='my-4'>
             <h2 className='mx-auto  text-center bg-slate-400 text-4xl py-3 text-white font-bold'>Spacial Products Of <span className=' text-blue-600'>Toys</span> <span className=' text-yellow-400'>Stars</span></h2>
 
 
