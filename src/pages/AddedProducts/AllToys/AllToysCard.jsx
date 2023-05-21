@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const AllToysCard = ({toy , details}) => {
     const { photo, _id, rating, seller, title, price, quantity, category, date, email } = toy;
     return (
-        <tr className='hover'>
+        <tr data-aos="fade-left" data-aos-duration="3000" className='hover'>
             <td>
                 {
                     seller && `${seller}`

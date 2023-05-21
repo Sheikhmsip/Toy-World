@@ -3,11 +3,15 @@ import { BiEdit } from "react-icons/bi";
 import { MdDeleteForever } from "react-icons/md";
 import { Link } from "react-router-dom";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
+
 const MyToysCard = ({ toy, deleteToy }) => {
     console.log(toy)
     const { photo, _id, rating, seller, title, price, quantity, category, date, email } = toy;
     return (
-        <tr className='hover'>
+        <tr data-aos="fade-right" data-aos-duration="3000" className='hover'>
             <td>
                 <div className=" h-24">
                     {<img src={photo} alt="" className='  h-24 w-20 mx-auto' />}

@@ -19,7 +19,7 @@ const ProductsCard = ({product}) => {
             <div className="card-body items-center text-center">
                 <h2 className="card-title text-white bg-black rounded-lg p-2">{title}</h2>
                 
-                <p className='bg-red-500 p-2 rounded-lg text-white'>${price}</p>
+                <p className='bg-red-500 rounded-lg card-title text-white p-2'>${price}</p>
                 <p className='text-black font-serif text-lg'>{description}</p>
                 <Rating style={{ maxWidth: 150 }} value={rating} ></Rating>
             </div>

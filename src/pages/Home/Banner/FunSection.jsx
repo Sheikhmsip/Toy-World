@@ -7,12 +7,12 @@ AOS.init();
 
 const FunSection = () => {
     return (
-        <div data-aos="fade-down" data-aos-duration="1000" className=' relative'>
+        <div data-aos="fade-down" data-aos-duration="1000" className='  mx-auto relative '>
             <img src="https://img.creator-prod.zmags.com/assets/images/6452c896b6fc7c5ba74c69d1.png?im=Resize,width=4011"  alt="" />
 
-            <div data-aos="fade-down"  data-aos-duration="2500" className='mx-auto absolute top-[45%] left-[40%] '>
-                <div className='border mx-auto p-5 rounded-xl'>
-                <h1 className='text-yellow-200 text-2xl'> Fun with Toys Stars</h1>
+            <div data-aos="fade-down"  data-aos-duration="2500"  className='mx-auto border-black border rounded-xl bg-blue-100 md:absolute md:top-[45%] md:left-[40%] top-[50%] left-[50%] '>
+                <div className=' border-black mx-auto p-5 rounded-xl'>
+                <h1 className='text-yellow-200 text-2xl text-center bg-slate-500 rounded-lg p-2'> Fun with Toys Stars</h1>
                 <p className='bg-black text-white p-3 text-lg rounded-xl mt-2'>Popular Toys Website </p>
 
                 <div className='pt-3'>

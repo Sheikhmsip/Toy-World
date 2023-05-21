@@ -27,7 +27,7 @@ const AuthProvider = ({children}) => {
         signInWithPopup(auth, googleProvider) 
         .then(result => {
             const loggedInUser = result.user;
-            console.log(loggedInUser)
+            // console.log(loggedInUser)
             setUser(loggedInUser);
             
         })

@@ -1,15 +1,23 @@
 import { Rating } from '@smastrom/react-rating';
 import React from 'react';
 import { useLoaderData } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import useTitle from '../../../hook/useTitle';
+AOS.init();
 
 const ProductsDetail = () => {
+
+    useTitle("Toy-Details")
     const details = useLoaderData()
     console.log(details)
     const { title, img, price, description, rating, quantity, seller_name, address, phone, category, email } = details;
     return (
         <div className=" flex rounded-md items-center justify-evenly py-5">
 
-            <div className="p-2 rounded-lg w-96  border border-blue-500">
+            <div data-aos="fade-right"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500" data-aos-duration="2000" className="p-2 rounded-lg w-96  border border-blue-500">
                 <h2 className=" text-2xl"><span className='text-sky-800 font-bold'>Toy Title: </span> {title} </h2>
                 <div className='mt-3  text-yellow-400'>
                     <h5 className='text-black font-bold'>Seller Details</h5>
@@ -35,7 +43,10 @@ const ProductsDetail = () => {
 
                 
             </div>
-            <div className=''>
+            <div data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="2000" className=''>
              <img className='rounded-md h-96' src={img} />
             </div>
             

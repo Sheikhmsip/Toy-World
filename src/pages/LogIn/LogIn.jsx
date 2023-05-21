@@ -22,16 +22,16 @@ const LogIn = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        const displayName = form.name.value;
+        
 
-        console.log(email, password, displayName)
+        // console.log(email, password)
         
         if(password.length < 6) {
             toast.error("please set at least 6 characters ")
             return
           }
 
-        login(email, password, displayName) 
+        login(email, password) 
         .then(result => {
             const user = result.user;
             console.log(user);
@@ -58,13 +58,6 @@ const LogIn = () => {
                 <div className="card-body">
                     <h1 className="text-4xl font-bold">Login Form</h1>
                     <form onSubmit={handleLogIn} >
-
-                    <div className="form-control">
-                            <label className=" font-bold label">
-                                <span className="label-text text-2xl">Name</span>
-                            </label>
-                            <input type="text" name='name' placeholder="Type Your Name" className="input input-bordered" />
-                        </div>
                         <div className="form-control">
                             <label className=" font-bold label">
                                 <span className="label-text text-2xl">Email</span>

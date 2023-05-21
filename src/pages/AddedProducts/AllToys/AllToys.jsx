@@ -4,6 +4,7 @@ import AllToysCard from './AllToysCard';
 
 import useTitle from '../../../hook/useTitle';
 import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css'
 
 const AllToys = () => {
     const allToys = useLoaderData();
@@ -68,10 +69,12 @@ const AllToys = () => {
                 <div className="modal-box relative">
                     <h3 className="font-bold text-lg">{title}</h3>
                     <p className="py-4">{description}</p>
-                    <div>
 
+
+                    <div className='flex'>
+                    <div className='leading-10'>
                     <p className='font-semibold'>
-                            <span className='text-blue-500 font-bold'>Rating</span> <Rating  style={{ maxWidth: 150 }} value={rating} ></Rating>
+                            <span className='text-blue-500 font-bold'>Rating</span> <Rating  style={{ maxWidth: 150 }}  value={rating} readOnly ></Rating>
                         </p>
                     <p className='font-semibold'>
                             <span className='text-blue-500 font-bold'>Contact:</span> {number}
@@ -84,9 +87,12 @@ const AllToys = () => {
                             <span className='text-blue-500 font-bold'>Address:</span> {address}
                         </p>
                     </div>
+                    <img src={photo} alt="" className='w-[60%]' />
+                    </div>
                     <div className="modal-action absolute -top-1 right-1">
                         <label htmlFor="my-modal-6" className="btn">X</label>
                     </div>
+                    
                 </div>
             </div>
         </div>

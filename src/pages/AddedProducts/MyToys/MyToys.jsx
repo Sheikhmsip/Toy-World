@@ -5,6 +5,8 @@ import Swal from 'sweetalert2';
 import useTitle from '../../../hook/useTitle';
 import { AuthContext } from '../../../providers/AuthProvider';
 
+
+
 const MyToys = () => {
     const {user} = useContext(AuthContext);
     useTitle('MyToys')
@@ -55,13 +57,13 @@ const MyToys = () => {
     }
 
     // console.log(myToys);
-    console.log(toys)
+    // console.log(toys)
     return (
         <div className='w-[95%] mx-auto'>
             <h2 className="text-5xl p-4 text-blue-500 font-bold">Your Total Toys: {toys.length} </h2>
 
             <div className="overflow-x-auto w-full">
-                <table className="table w-full text-center  table-fixed">
+                <table   className="table w-full text-center  table-fixed">
                     {/* head */}
                     <thead>
                         <tr>

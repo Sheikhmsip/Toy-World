@@ -2,6 +2,9 @@ import React, { useContext } from 'react';
 import { toast } from 'react-hot-toast';
 import { AuthContext } from '../../../providers/AuthProvider';
 import useTitle from '../../../hook/useTitle';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const AddToy = () => {
     useTitle("Add Toy")
@@ -48,8 +51,8 @@ const AddToy = () => {
 
     return (
         <div className='w-[95%] mx-auto py-4'>
-            <h2 className='text-center text-3xl'> Toy Add Form   </h2>
-            <form onSubmit={handelAddToy}>
+            <h2 data-aos="fade-right" data-aos-duration="3000"  className='text-center text-blue-500 font-bold py-3 bg-gray-400 rounded-xl text-3xl'> Toy Add Form   </h2>
+            <form data-aos="fade-down" data-aos-duration="3000" onSubmit={handelAddToy}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {
                         user &&
@@ -149,7 +152,7 @@ const AddToy = () => {
                     </div>
                 </div>
 
-                <div className="form-control mt-6">
+                <div data-aos="fade-right" data-aos-duration="2000" className="form-control mt-6">
                     <input className="btn btn-primary btn-block" type="submit" value="Add Product" />
                 </div>
             </form>

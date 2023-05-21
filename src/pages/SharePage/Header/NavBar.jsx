@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-hot-toast';
+import ActiveLink from '../../ActiveLink/ActiveLink';
 const NavBar = () => {
   
     const {user, logout} = useContext(AuthContext);
@@ -17,11 +18,16 @@ const NavBar = () => {
     }
 
     const nevItems = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/alltoys">All Toys</Link></li>
 
-        <li><Link to='/mytoys'>My Toys</Link></li>
-        <li><Link to='/addtoy'>Add A Toy</Link></li>
+        <li><ActiveLink to="/">Home</ActiveLink></li>
+        <li><ActiveLink to="/alltoys">All Toys</ActiveLink></li>
+
+        {
+            user && <>
+            <li><ActiveLink to='/mytoys'>My Toys</ActiveLink></li>
+            <li><ActiveLink to='/addtoy'>Add A Toy</ActiveLink></li>
+            </>
+        }
         
 
         <li><Link to="/blogs">Blogs</Link></li>
