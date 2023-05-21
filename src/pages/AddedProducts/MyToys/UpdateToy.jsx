@@ -37,7 +37,7 @@ const UpdateToy = () => {
     }
     return (
         <div className='w-[95%] mx-auto py-3'>
-            <h2 className='text-center text-3xl'>  Update Toy Form </h2>
+            <h2 className='text-center text-blue-500 font-bold py-3 bg-gray-400 rounded-xl text-3xl'>  Update Toy Form </h2>
             <form onSubmit={updateProduct}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 

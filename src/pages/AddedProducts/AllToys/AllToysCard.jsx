@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const AllToysCard = ({toy}) => {
     const { photo, _id, rating, seller, title, price, quantity, category, date, email } = toy;
     return (
-        <tr>
+        <tr className='hover'>
             <td>
                 {
                     seller && `${seller}`

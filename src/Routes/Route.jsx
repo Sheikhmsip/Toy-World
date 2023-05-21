@@ -10,6 +10,7 @@ import AddToy from "../pages/AddedProducts/AddToy/AddToy";
 import UpdateToy from "../pages/AddedProducts/MyToys/UpdateToy";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import ProductsDetail from "../pages/Home/Products/ProductsDetail";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -38,26 +39,30 @@ const router = createBrowserRouter([
         {
             path: 'alltoys',
             element: <AllToys></AllToys>,
-            loader: () => fetch('https://toys-server-six.vercel.app/toys')
+            loader: () => fetch('http://localhost:1000/toys')
         },
         {
             path: 'mytoys',
-            element: <MyToys></MyToys>,
+            element: <PrivateRoute>
+                <MyToys></MyToys>
+            </PrivateRoute>
             
         },
         {
             path: 'addtoy',
-            element: <AddToy></AddToy>
+            element: <PrivateRoute>
+                <AddToy></AddToy>
+            </PrivateRoute>
         },
         {
             path: 'updatetoy/:id',
             element: <UpdateToy></UpdateToy>,
-            loader: ({params}) => fetch(`https://toys-server-six.vercel.app/toys/${params.id}`)
+            loader: ({params}) => fetch(`http://localhost:1000/toys/${params.id}`)
         },
         {
             path: 'detail/:id',
-            element: <ProductsDetail></ProductsDetail>,
-            loader: ({params}) => fetch(`https://toys-server-six.vercel.app/products/${params.id}`)
+            element: <PrivateRoute><ProductsDetail></ProductsDetail></PrivateRoute>,
+            loader: ({params}) => fetch(`http://localhost:1000/products/${params.id}`)
             
         }
     ]

@@ -28,7 +28,7 @@ const Products = () => {
  
   
     useEffect(() => {
-        fetch('https://toys-server-six.vercel.app/products')
+        fetch('http://localhost:1000/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

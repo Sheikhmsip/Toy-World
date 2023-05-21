@@ -13,14 +13,14 @@ const AddToy = () => {
         event.preventDefault();
         const form = event.target;
         const title = form.title.value;
-        const seller = form.seller.value;
+        const seller = form.seller?.value;
         const price = form.price.value;
         const quantity = form.quantity.value;
         const photo = form.photo.value;
         const rating = form.rating.value;
         const address = form.address.value;
         const number = form.number.value;
-        const email = form.email.value;
+        const email = form.email?.value;
         const category = form.category.value;
         const date = form.date.value;
         const description = form.description.value;

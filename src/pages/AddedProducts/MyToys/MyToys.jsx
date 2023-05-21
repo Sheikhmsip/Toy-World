@@ -10,7 +10,7 @@ const MyToys = () => {
     const [toys, setToys] = useState([]);
 
     useEffect(() =>{
-        fetch('https://toys-server-six.vercel.app/toys')
+        fetch('http://localhost:1000/toys')
         .then(res => res.json())
         .then(data => setToys(data))
     } , [])
@@ -28,7 +28,7 @@ const MyToys = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then( (result) => {
             if (result.isConfirmed) {
-                fetch(`https://toys-server-six.vercel.app/toys/${id}`, {
+                fetch(`http://localhost:1000/toys/${id}`, {
             method: "DELETE"
         })
         .then(res => res.json())
@@ -59,7 +59,7 @@ const MyToys = () => {
             <h2 className="text-5xl p-4 text-blue-500 font-bold">Your Total Toys: {toys.length} </h2>
 
             <div className="overflow-x-auto w-full">
-                <table className="table w-full text-center">
+                <table className="table w-full text-center  table-fixed">
                     {/* head */}
                     <thead>
                         <tr>
@@ -76,7 +76,7 @@ const MyToys = () => {
                             
                         </tr>
                     </thead>
-                    <tbody >
+                    <tbody className='hover hover:bg-sky-700'>
                     
                        {
                         toys.map( toy => <MyToysCard

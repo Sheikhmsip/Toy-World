@@ -7,7 +7,7 @@ const MyToysCard = ({ toy, deleteToy }) => {
     console.log(toy)
     const { photo, _id, rating, seller, title, price, quantity, category, date, email } = toy;
     return (
-        <tr>
+        <tr className='hover'>
             <td>
                 <div className=" h-24">
                     {<img src={photo} alt="" className='  h-24 w-20 mx-auto' />}

@@ -8,14 +8,13 @@ const AllToys = () => {
     const allToys = useLoaderData()
     useTitle("All Toys")
     return (
-        <div>
-            <div>
-                <h2>
-                    Here is All Toys of Toy Stars Users {allToys.length} 
-                </h2>
+        <div className='w-[96%] mx-auto'> 
+            <div >
+            <h2 className='text-center text-blue-500 font-bold py-3 bg-gray-400 rounded-xl text-3xl'>   Here is All Toys of Toy Stars Users {allToys.length}  </h2>
+                
             </div>
            
-            <div className="overflow-x-auto w-full">
+            <div className="overflow-x-auto w-full my-2">
                 <table className="table w-full text-center">
                     {/* head */}
                     <thead>

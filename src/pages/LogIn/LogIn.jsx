@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BsGoogle } from 'react-icons/Bs';
 import { AuthContext } from '../../providers/AuthProvider';
 import { toast } from 'react-hot-toast';
@@ -9,8 +9,13 @@ import useTitle from '../../hook/useTitle';
 const LogIn = () => {
 
     const {login, logInWithGoogle } = useContext(AuthContext);
-   useTitle("Login")
-    const [error, setError] = useState('')
+   useTitle("Login");
+    const [error, setError] = useState('');
+
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/'
 
     const handleLogIn = event => {
         event.preventDefault();
@@ -31,6 +36,7 @@ const LogIn = () => {
             const user = result.user;
             console.log(user);
             toast.success('Login Successful')
+            navigate(from, {replace: true})
             event.target.reset();
             return setError('')
         })
